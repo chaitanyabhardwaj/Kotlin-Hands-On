@@ -25,4 +25,11 @@ fun main() {
     println(nStr1?:"Null component")
     nStr1 = "Hello World!"
     println(nStr1?:"Null component")
+
+    //safe casting
+    val nInt1 = 123
+    //This will throw class cast exception
+    //val nStr2 = nInt1 as String
+    val nStr3 = nInt1 as? String // this will place null in nStr3 instead of throwing exception
+    println(nStr3)
 }
